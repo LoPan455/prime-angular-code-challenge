@@ -3,6 +3,7 @@ app.controller('HeroListController',['$http', function($http){
     var self = this;
     self.testMessage = 'Test message is good';
     self.heroesList = {};
+    self.hero = {};
     getHeroes()
 
     function getHeroes(){
@@ -25,6 +26,19 @@ app.controller('HeroListController',['$http', function($http){
         getHeroes();
       })
     }
+
+    self.updateHero = function(id,persona,alias,power_id){
+      var hero = { alias: alias, persona: persona, power_id: power_id};
+      console.log('Update Clicked');
+      $http({
+        method: 'PUT',
+        url: '/heroes/' + id
+        data: hero
+      }).then(function(response){
+        console.log('updateHeroes() complete. Response from server is: ',response);
+      })//end http
+
+    }//end function
 
 
 

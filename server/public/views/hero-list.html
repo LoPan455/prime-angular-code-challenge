@@ -6,12 +6,15 @@
       <tr>
         <th>Persona</th>
         <th>Alias</th>
+        <th>SuperPower ID</th>
       </tr>
       </thead>
       <tbody>
         <tr ng-repeat="hero in hlc.heroesList.list">
-          <td>{{hero.persona}}</td>
-          <td>{{hero.alias}}</td>
+          <td><input ng-model="hero.persona" value="{{hero.persona}}"</td>
+          <td><input ng-model="hero.alias" value="{{hero.alias}}"</td>
+          <td><input ng-model="hero.power_id" value="{{hero.power_id}}"</td>
+          <td><button ng-click="hlc.updateHero({{hero.id}},{{hero.persona}},{{hero.alias}},{{hero.power_id}})">Update</button></td>
           <td><button ng-click="hlc.deleteHero(hero.id)">Delete</button></td>
         </tr>
       </tbody>
