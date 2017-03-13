@@ -12,8 +12,7 @@
         <tr ng-repeat="hero in hlc.heroesList.list">
           <td>{{hero.persona}}</td>
           <td>{{hero.alias}}</td>
+          <td><button ng-click="hlc.deleteHero(hero.id)">Delete</button></td>
         </tr>
       </tbody>
   </table>
-
-  
