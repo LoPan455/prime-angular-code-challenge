@@ -3,7 +3,6 @@ app.controller('HeroListController',['$http', function($http){
     var self = this;
     self.testMessage = 'Test message is good';
     self.heroesList = {};
-
     getHeroes()
 
     function getHeroes(){
