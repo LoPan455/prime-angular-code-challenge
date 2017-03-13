@@ -1,4 +1,11 @@
 <h2>Hero Entry</h2>
 <form>
   <h3>New Hero Entry Form</h3>
+  <form id="new-hero=form">
+    <label>Persona<input ng-model="hec.newHeroObject.persona" type="text" placeholder="persona" />{{newEmployeeObject.employee_id}}</Label>
+    <label>Alias<input ng-model="hec.newHeroObject.alias" type="text" placeholder="alias" /></Label>
+    <!-- <label>SuperPower<input ng-model="home.newEmployeeObject.first_name" type="text" placeholder="Employee First Name" /></Label> -->
+
+    <button ng-click="home.addNewEmployee()">Submit</button>
+  </form>
 </form>
