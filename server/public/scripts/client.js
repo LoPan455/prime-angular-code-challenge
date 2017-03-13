@@ -7,6 +7,13 @@ app.config(['$routeProvider', function($routeProvider) {
       controller: 'HeroListController',
       controllerAs: 'hlc'
     })
+
+    .when('/addHero', {
+      templateUrl: '/views/hero-entry.html',
+      controller: 'HeroEntryController',
+      controllerAs: 'hec'
+    })
+
     .otherwise({
       redirectTo: 'heroList'
     })
