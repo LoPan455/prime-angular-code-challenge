@@ -1,2 +1,19 @@
-<p>This should show a list of all heroes in the system, displaying all the information from the entry captured in the view before. 
+<p>This should show a list of all heroes in the system, displaying all the information from the entry captured in the view before.
     Each hero in the listing needs to be able to be deleted from the system in the event of their unfortunate demise.</p>
+<h2>Test Message: <span>{{hlc.testMessage}}</span></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Persona</th>
+        <th>Alias</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="hero in hlc.heroesList.list">
+          <td>{{hero.persona}}</td>
+          <td>{{hero.alias}}</td>
+        </tr>
+      </tbody>
+  </table>
+
+  
